@@ -31,8 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("menu-show");
   }
 
-  if (window.screen.width <= 700) {
-    menuContainer.innerHTML = menuContent.innerHTML + bottomMenu.innerHTML;
+  if (window.screen.width > 700) {
+    menuContent.innerHTML = topMenu.innerHTML;
+  } else {
+    menuContent.innerHTML = topMenu.innerHTML + bottomMenu.innerHTML;
     const menuCloseBtn = document.getElementById("menuClose");
     menuCloseBtn.addEventListener("click", showMenu);
   }
@@ -203,19 +205,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     breakpoints: {
       320: {
-        slidesPerView: 2.3,
+        slidesPerView: 2.1,
         spaceBetween: 20,
       },
       380: {
-        slidesPerView: 2.6,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       425: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       501: {
-        slidesPerView: 1.7,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
       590: {
@@ -223,14 +225,18 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 30,
       },
       700: {
-        slidesPerView: 1.9,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
-      855: {
-        slidesPerView: 2.5,
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 2,
         spaceBetween: 30,
       },
-      968: {
+      1110: {
         slidesPerView: 3,
         spaceBetween: 30,
       },
